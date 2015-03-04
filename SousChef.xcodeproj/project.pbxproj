@@ -55,6 +55,7 @@
 		29D973211A45FA15002B6D90 /* InitialInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D973201A45FA15002B6D90 /* InitialInterfaceController.swift */; };
 		8F2876591AA6CD3B00D9841A /* RecipeRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2876581AA6CD3B00D9841A /* RecipeRowController.swift */; };
 		8F28765B1AA7351B00D9841A /* RecipesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F28765A1AA7351B00D9841A /* RecipesInterfaceController.swift */; };
+		8F28765D1AA73BA200D9841A /* RecipeDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F28765C1AA73BA200D9841A /* RecipeDetailInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,7 @@
 		29D973201A45FA15002B6D90 /* InitialInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialInterfaceController.swift; path = "SousChef WatchKit Extension/InitialInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
 		8F2876581AA6CD3B00D9841A /* RecipeRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeRowController.swift; sourceTree = "<group>"; };
 		8F28765A1AA7351B00D9841A /* RecipesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesInterfaceController.swift; sourceTree = "<group>"; };
+		8F28765C1AA73BA200D9841A /* RecipeDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				29D973201A45FA15002B6D90 /* InitialInterfaceController.swift */,
+				8F28765C1AA73BA200D9841A /* RecipeDetailInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			path = "../SousChef Watch App";
@@ -681,6 +684,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F28765D1AA73BA200D9841A /* RecipeDetailInterfaceController.swift in Sources */,
 				8F2876591AA6CD3B00D9841A /* RecipeRowController.swift in Sources */,
 				29D973211A45FA15002B6D90 /* InitialInterfaceController.swift in Sources */,
 				8F28765B1AA7351B00D9841A /* RecipesInterfaceController.swift in Sources */,

@@ -96,10 +96,17 @@
             </objects>
             <point key="canvasLocation" x="238" y="198"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Recipe Detail Interface Controller-->
         <scene sceneID="ahV-Fx-h8v">
             <objects>
-                <controller id="bUS-FI-SWM"/>
+                <controller id="bUS-FI-SWM" customClass="RecipeDetailInterfaceController" customModule="SousChef_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Label" numberOfLines="0" id="gh3-Yr-wS5"/>
+                    </items>
+                    <connections>
+                        <outlet property="nameLabel" destination="gh3-Yr-wS5" id="skO-uv-fmF"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="458" y="198"/>
         </scene>

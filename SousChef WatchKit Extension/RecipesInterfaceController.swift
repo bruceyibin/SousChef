@@ -21,4 +21,8 @@ class RecipesInterfaceController: WKInterfaceController {
       controller.textLabel.setText(recipe)
     }
   }
+  override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
+    return recipes[rowIndex]
+  }
+
 }

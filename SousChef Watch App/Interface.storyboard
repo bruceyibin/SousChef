@@ -69,7 +69,30 @@
         <!--Recipes-->
         <scene sceneID="mpL-qe-rkB">
             <objects>
-                <controller title="Recipes" id="JhI-do-EWD"/>
+                <controller title="Recipes" id="JhI-do-EWD" customClass="RecipesInterfaceController" customModule="SousChef_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="sR7-oF-jsh">
+                            <items>
+                                <tableRow identifier="RecipeRowType" id="o2j-xa-Wg7" customClass="RecipeRowController" customModule="SousChef_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="qyF-0z-udU">
+                                        <items>
+                                            <label alignment="left" text="Label" id="RD6-28-XpP"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="bUS-FI-SWM" kind="push" id="vkn-lw-77J"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="RD6-28-XpP" id="2Yf-YI-0gx"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="sR7-oF-jsh" id="dbz-Hq-i2z"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="238" y="198"/>
         </scene>

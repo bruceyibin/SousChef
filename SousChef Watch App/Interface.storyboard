@@ -173,7 +173,7 @@
         <!--Directions-->
         <scene sceneID="9do-zs-DCt">
             <objects>
-                <controller title="Directions" id="GN5-Ce-hPF">
+                <controller title="Directions" id="GN5-Ce-hPF" customClass="RecipeDirectionsInterfaceController" customModule="SousChef_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="rvw-LD-lIR">
                             <items>
@@ -194,6 +194,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="rvw-LD-lIR" id="cvZ-xC-XON"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="702" y="75"/>

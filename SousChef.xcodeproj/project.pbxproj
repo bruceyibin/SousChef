@@ -59,6 +59,7 @@
 		8F28765F1AA75D3500D9841A /* IngredientRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F28765E1AA75D3500D9841A /* IngredientRowController.swift */; };
 		8F2876611AA75E7400D9841A /* StepRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2876601AA75E7400D9841A /* StepRowController.swift */; };
 		8F2876651AA75FA000D9841A /* RecipeIngredientsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2876641AA75FA000D9841A /* RecipeIngredientsInterfaceController.swift */; };
+		8F2876671AA7695E00D9841A /* RecipeDirectionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2876661AA7695E00D9841A /* RecipeDirectionsInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		8F28765E1AA75D3500D9841A /* IngredientRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientRowController.swift; sourceTree = "<group>"; };
 		8F2876601AA75E7400D9841A /* StepRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepRowController.swift; sourceTree = "<group>"; };
 		8F2876641AA75FA000D9841A /* RecipeIngredientsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsInterfaceController.swift; sourceTree = "<group>"; };
+		8F2876661AA7695E00D9841A /* RecipeDirectionsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDirectionsInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				8F28765A1AA7351B00D9841A /* RecipesInterfaceController.swift */,
 				8F28765C1AA73BA200D9841A /* RecipeDetailInterfaceController.swift */,
 				8F2876641AA75FA000D9841A /* RecipeIngredientsInterfaceController.swift */,
+				8F2876661AA7695E00D9841A /* RecipeDirectionsInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			path = "../SousChef Watch App";
@@ -698,6 +701,7 @@
 				8F2876591AA6CD3B00D9841A /* RecipeRowController.swift in Sources */,
 				29D973211A45FA15002B6D90 /* InitialInterfaceController.swift in Sources */,
 				8F28765B1AA7351B00D9841A /* RecipesInterfaceController.swift in Sources */,
+				8F2876671AA7695E00D9841A /* RecipeDirectionsInterfaceController.swift in Sources */,
 				8F28765F1AA75D3500D9841A /* IngredientRowController.swift in Sources */,
 				8F2876651AA75FA000D9841A /* RecipeIngredientsInterfaceController.swift in Sources */,
 			);

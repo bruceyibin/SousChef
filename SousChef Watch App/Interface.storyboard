@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
     </dependencies>
     <scenes>
         <!--Initial Interface Controller-->
@@ -42,9 +42,37 @@
                         </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="15" bottom="0.0"/>
+                    <connections>
+                        <segue destination="AHz-k9-8Ne" kind="relationship" relationship="nextPage" id="Nim-FZ-mtR"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="142" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="gct-Oh-fC8">
+            <objects>
+                <controller id="AHz-k9-8Ne">
+                    <items>
+                        <label alignment="left" text="Hello, world!" id="yYY-lm-0hO"/>
+                    </items>
+                    <connections>
+                        <segue destination="EP8-hx-QGC" kind="relationship" relationship="nextPage" id="01N-0e-fkh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="356" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="4rc-S1-7CV">
+            <objects>
+                <controller id="EP8-hx-QGC">
+                    <items>
+                        <button width="1" alignment="left" title="Tap Me!" id="pxw-kc-2mZ"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="568" y="345"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.10588235294117647" green="0.60784313725490191" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>

@@ -62,7 +62,32 @@
         <!--Ingredients-->
         <scene sceneID="PSl-vz-XRJ">
             <objects>
-                <controller title="Ingredients" id="J7f-OP-c2d"/>
+                <controller title="Ingredients" id="J7f-OP-c2d" customClass="RecipeIngredientsInterfaceController" customModule="SousChef_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="iuE-CY-lz1">
+                            <items>
+                                <tableRow identifier="IngredientRow" id="OtD-g4-eNa" customClass="IngredientRowController" customModule="SousChef_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="O5Q-L2-5Mh">
+                                        <items>
+                                            <label alignment="left" text="Fresh Pepper" numberOfLines="0" id="6yE-vr-KtV"/>
+                                            <label alignment="left" text="1 tsp" id="Y7I-vu-5eQ">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="measurementLabel" destination="Y7I-vu-5eQ" id="I7S-6S-OKJ"/>
+                                        <outlet property="nameLabel" destination="6yE-vr-KtV" id="IPS-rg-ZNY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="iuE-CY-lz1" id="Z7Q-oI-mfF"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="702" y="349"/>
         </scene>
@@ -148,7 +173,28 @@
         <!--Directions-->
         <scene sceneID="9do-zs-DCt">
             <objects>
-                <controller title="Directions" id="GN5-Ce-hPF"/>
+                <controller title="Directions" id="GN5-Ce-hPF">
+                    <items>
+                        <table alignment="left" id="rvw-LD-lIR">
+                            <items>
+                                <tableRow identifier="StepRow" id="HWh-bA-s70" customClass="StepRowController" customModule="SousChef_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="G3b-mD-kPJ">
+                                        <items>
+                                            <label alignment="left" text="Step 1" numberOfLines="0" id="XSL-hR-F3j">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label alignment="left" text="Step description" numberOfLines="0" id="zDE-eU-3Xt"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="directionsLabel" destination="zDE-eU-3Xt" id="6vy-KY-WOi"/>
+                                        <outlet property="stepLabel" destination="XSL-hR-F3j" id="SlH-OD-TYx"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="702" y="75"/>
         </scene>

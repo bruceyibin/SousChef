@@ -5,6 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
     </dependencies>
     <scenes>
+        <!--Done-->
+        <scene sceneID="srZ-JP-1Xq">
+            <objects>
+                <controller title="Done" id="dsg-gy-67V"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="104"/>
+        </scene>
         <!--Initial Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
@@ -27,6 +34,9 @@
                                             </label>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <segue destination="dsg-gy-67V" kind="modal" identifier="DemoModalSegue" id="KVw-Aa-EcB"/>
+                                    </connections>
                                 </button>
                                 <button alignment="center" id="vWz-wV-II9">
                                     <group key="contentGroup" alignment="left" layout="vertical" id="cDV-Ys-nF7">
@@ -47,7 +57,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="142" y="345"/>
+            <point key="canvasLocation" x="49" y="345"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="gct-Oh-fC8">

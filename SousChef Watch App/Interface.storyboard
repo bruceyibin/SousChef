@@ -5,13 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
     </dependencies>
     <scenes>
-        <!--Done-->
-        <scene sceneID="srZ-JP-1Xq">
-            <objects>
-                <controller title="Done" id="dsg-gy-67V"/>
-            </objects>
-            <point key="canvasLocation" x="299" y="104"/>
-        </scene>
         <!--Initial Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
@@ -35,7 +28,7 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <segue destination="dsg-gy-67V" kind="modal" identifier="DemoModalSegue" id="KVw-Aa-EcB"/>
+                                        <segue destination="JhI-do-EWD" kind="push" id="Uww-9z-YcA"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" id="vWz-wV-II9">
@@ -47,42 +40,52 @@
                                             </label>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <segue destination="7vc-8T-5qX" kind="push" id="L22-Dk-YYU"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="15" bottom="0.0"/>
-                    <connections>
-                        <segue destination="AHz-k9-8Ne" kind="relationship" relationship="nextPage" id="Nim-FZ-mtR"/>
-                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="49" y="345"/>
+            <point key="canvasLocation" x="-14" y="349"/>
+        </scene>
+        <!--Groceries-->
+        <scene sceneID="Vbg-im-Irh">
+            <objects>
+                <controller title="Groceries" id="7vc-8T-5qX"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="483"/>
         </scene>
         <!--Interface Controller-->
-        <scene sceneID="gct-Oh-fC8">
+        <scene sceneID="PSl-vz-XRJ">
             <objects>
-                <controller id="AHz-k9-8Ne">
-                    <items>
-                        <label alignment="left" text="Hello, world!" id="yYY-lm-0hO"/>
-                    </items>
-                    <connections>
-                        <segue destination="EP8-hx-QGC" kind="relationship" relationship="nextPage" id="01N-0e-fkh"/>
-                    </connections>
-                </controller>
+                <controller id="J7f-OP-c2d"/>
             </objects>
-            <point key="canvasLocation" x="356" y="345"/>
+            <point key="canvasLocation" x="665" y="349"/>
+        </scene>
+        <!--Recipes-->
+        <scene sceneID="mpL-qe-rkB">
+            <objects>
+                <controller title="Recipes" id="JhI-do-EWD"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="198"/>
         </scene>
         <!--Interface Controller-->
-        <scene sceneID="4rc-S1-7CV">
+        <scene sceneID="ahV-Fx-h8v">
             <objects>
-                <controller id="EP8-hx-QGC">
-                    <items>
-                        <button width="1" alignment="left" title="Tap Me!" id="pxw-kc-2mZ"/>
-                    </items>
-                </controller>
+                <controller id="bUS-FI-SWM"/>
             </objects>
-            <point key="canvasLocation" x="568" y="345"/>
+            <point key="canvasLocation" x="458" y="198"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="9do-zs-DCt">
+            <objects>
+                <controller id="GN5-Ce-hPF"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="75"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.10588235294117647" green="0.60784313725490191" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>

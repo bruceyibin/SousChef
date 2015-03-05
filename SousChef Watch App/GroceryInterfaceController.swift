@@ -55,7 +55,16 @@ class GroceryInterfaceController: WKInterfaceController {
         row.image.setImageNamed(type.lowercaseString)
       } else if let row = controller as? GroceryRowController {
         let item = context.item as Ingredient
-        row.textLabel.setText(item.name.capitalizedString)
+        
+        if item.purchased {
+          let attributes = strikethroughCellTextAttributes
+          let attributedText = NSAttributedString(string:
+            item.name.capitalizedString, attributes: attributes)
+          row.textLabel.setAttributedText(attributedText)
+        } else {
+          row.textLabel.setText(item.name.capitalizedString)
+        }
+
         row.measurementLabel.setText(item.quantity)
         let quantity = groceryList.quantityForItem(item)
         let quantityText = quantity > 1 ? "x\(quantity)" : ""

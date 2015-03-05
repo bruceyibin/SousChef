@@ -11,18 +11,36 @@ import Foundation
 import SousChefKit
 
 
-class GroceryInterfaceController: WKInterfaceController {
-  let groceryList = GroceryList(useSample: true)
 
+class GroceryInterfaceController: WKInterfaceController {
+  
   @IBOutlet weak var table: WKInterfaceTable!
-    override func awakeWithContext(context: AnyObject?) {
+  let groceryList = GroceryList(useSample: true)
+  lazy var flatList: [FlatGroceryItem] = { return self.groceryList.flattenedGroceries()
+    }()
+  
+  
+  var cellTextAttributes: [NSObject: AnyObject] {
+    return [
+    NSFontAttributeName: UIFont.systemFontOfSize(16),
+    NSForegroundColorAttributeName: UIColor.whiteColor()
+    ]
+  }
+  
+  var strikethroughCellTextAttributes: [NSObject: AnyObject] {
+    return [
+    NSFontAttributeName: UIFont.systemFontOfSize(16),
+    NSForegroundColorAttributeName: UIColor.lightGrayColor(),
+    NSStrikethroughStyleAttributeName:
+      NSUnderlineStyle.StyleSingle.rawValue
+    ]
+  }
+  
+  override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         updateTable()
     }
-  
-  lazy var flatList: [FlatGroceryItem] = { return self.groceryList.flattenedGroceries()
-    }()
   
   func updateTable() {
     table.setRowTypes(flatList.map({ $0.id }))
@@ -55,5 +73,30 @@ class GroceryInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+  
+  override func table(table: WKInterfaceTable,
+    didSelectRowAtIndex rowIndex: Int) {
+    if let row = table.rowControllerAtIndex(rowIndex)
+      as? GroceryRowController {
+      let item = flatList[rowIndex].item as Ingredient
+      let text = item.name.capitalizedString
+      
+      var attributes: [NSObject: AnyObject]?
+      
+      // attributes code
+      if item.purchased {
+        attributes = cellTextAttributes
+      } else {
+        attributes = strikethroughCellTextAttributes
+      }
+      
+      groceryList.setIngredient(item, purchased: !item.purchased)
+      groceryList.sync()
+      
+      let attributedText = NSAttributedString(string: text,
+        attributes: attributes)
+      row.textLabel.setAttributedText(attributedText)
+    }
+  }
 
 }

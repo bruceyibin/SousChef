@@ -77,7 +77,7 @@
                                 <tableRow identifier="GroceryRow" id="A3b-kb-3HO" customClass="GroceryRowController" customModule="SousChef_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="KvU-UA-Wkq">
                                         <items>
-                                            <label alignment="left" text="Ingredient" numberOfLines="0" id="IPt-3L-xrH"/>
+                                            <label width="76" height="20" alignment="left" text="Ingredient" numberOfLines="0" id="IPt-3L-xrH"/>
                                             <group width="1" alignment="left" id="N7K-h4-H7A">
                                                 <items>
                                                     <label alignment="left" text="2 tbsp" id="fHT-c3-ZTQ">
@@ -133,6 +133,12 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="Ne7-az-DFT">
+                        <items>
+                            <menuItem title="Add to List" icon="add" id="9hp-TL-PRe"/>
+                            <menuItem title="Cancel" icon="decline" id="MtY-Qb-g3Q"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="table" destination="iuE-CY-lz1" id="Z7Q-oI-mfF"/>
                     </connections>

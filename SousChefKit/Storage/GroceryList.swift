@@ -182,6 +182,7 @@ public class GroceryList {
   private var sections: [IngredientType] {
     return table.keys.array
   }
+  
 
   private func updatedTable(itemList: GroceryItems) -> GroceryTable {
     var table = GroceryTable()

@@ -12,6 +12,7 @@ import SousChefKit
 
 class RecipeIngredientsInterfaceController: WKInterfaceController {
   var recipe: Recipe?
+  let groceryList = GroceryList()
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -28,6 +29,18 @@ class RecipeIngredientsInterfaceController: WKInterfaceController {
       }
       
     }
+  
+  @IBAction func onAddToGrocery() {
+    
+    if let items = self.recipe?.ingredients {
+      for item in items {
+        groceryList.addItemToList(item)
+      }
+      groceryList.sync() 
+    }
+  }
+  
+  
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

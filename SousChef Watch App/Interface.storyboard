@@ -103,8 +103,16 @@
                     </items>
                     <menu key="menu" id="O7r-Ef-hFH">
                         <items>
-                            <menuItem title="Clear All" icon="trash" id="kf6-12-Dr7"/>
-                            <menuItem title="Purchased" image="clear-purchased" id="jWn-g6-wwf"/>
+                            <menuItem title="Clear All" icon="trash" id="kf6-12-Dr7">
+                                <connections>
+                                    <action selector="onClearAll" destination="7vc-8T-5qX" id="sld-sh-Yip"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Purchased" image="clear-purchased" id="jWn-g6-wwf">
+                                <connections>
+                                    <action selector="onRemovePurchased" destination="7vc-8T-5qX" id="E9J-dN-wgY"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Cancel" icon="decline" id="IYf-GN-W3w"/>
                         </items>
                     </menu>

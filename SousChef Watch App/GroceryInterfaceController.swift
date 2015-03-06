@@ -13,29 +13,69 @@ import SousChefKit
 
 
 class GroceryInterfaceController: WKInterfaceController {
-  
-  @IBOutlet weak var table: WKInterfaceTable!
-  let groceryList = GroceryList(useSample: true)
+
+  let groceryList = GroceryList()
   lazy var flatList: [FlatGroceryItem] = { return self.groceryList.flattenedGroceries()
     }()
   
   
   var cellTextAttributes: [NSObject: AnyObject] {
     return [
-    NSFontAttributeName: UIFont.systemFontOfSize(16),
-    NSForegroundColorAttributeName: UIColor.whiteColor()
+      NSFontAttributeName: UIFont.systemFontOfSize(16),
+      NSForegroundColorAttributeName: UIColor.whiteColor()
     ]
   }
   
   var strikethroughCellTextAttributes: [NSObject: AnyObject] {
     return [
-    NSFontAttributeName: UIFont.systemFontOfSize(16),
-    NSForegroundColorAttributeName: UIColor.lightGrayColor(),
-    NSStrikethroughStyleAttributeName:
-      NSUnderlineStyle.StyleSingle.rawValue
+      NSFontAttributeName: UIFont.systemFontOfSize(16),
+      NSForegroundColorAttributeName: UIColor.lightGrayColor(),
+      NSStrikethroughStyleAttributeName:
+        NSUnderlineStyle.StyleSingle.rawValue
     ]
   }
   
+  
+  @IBAction func onRemovePurchased() {
+    
+    var indexSet = NSMutableIndexSet()
+    
+    for (index, listItem) in enumerate(flatList) {
+      if let item = flatList[index].item as? Ingredient {
+        if item.purchased {
+          indexSet.addIndex(index)
+          groceryList.removeItem(item)
+        }
+      }
+    }
+    
+    groceryList.sync()
+    
+    table.removeRowsAtIndexes(indexSet)
+    flatList = self.groceryList.flattenedGroceries()
+    
+  }
+  
+  @IBAction func onClearAll() {
+
+    let indices = NSIndexSet(indexesInRange: NSRange(location: 0, length: table.numberOfRows))
+    
+    table.removeRowsAtIndexes(indices)
+    
+    groceryList.removeAllItems()
+    groceryList.sync()
+    
+    for (index, listItem) in enumerate(flatList) {
+      if let item = listItem.item as? Ingredient {
+        item.purchased = false
+      }
+    }
+    
+    flatList = self.groceryList.flattenedGroceries()
+  }
+  
+  @IBOutlet weak var table: WKInterfaceTable!
+
   override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

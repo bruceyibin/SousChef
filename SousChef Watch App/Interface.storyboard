@@ -101,6 +101,13 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="O7r-Ef-hFH">
+                        <items>
+                            <menuItem title="Clear All" icon="trash" id="kf6-12-Dr7"/>
+                            <menuItem title="Purchased" image="clear-purchased" id="jWn-g6-wwf"/>
+                            <menuItem title="Cancel" icon="decline" id="IYf-GN-W3w"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="table" destination="V8C-ay-XcK" id="0Ll-O7-Aqt"/>
                     </connections>
